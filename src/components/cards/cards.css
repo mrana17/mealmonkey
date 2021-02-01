@@ -2,6 +2,7 @@
   border-radius: 20px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .card-image {
@@ -17,14 +18,16 @@
   font-weight: bold;
 }
 
-.card-container {
+/*.card-container {
   grid-auto-flow: column;
   overflow-x: auto;
   padding-left: 20px;
 }
+*/
 
 /* philips vorschlag */
-.card-container {
+
+/.card-container {
   display: grid;
   grid-template-columns: repeat(6, auto);
   grid-column-gap: 20px;

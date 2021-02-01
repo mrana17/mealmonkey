@@ -30,11 +30,11 @@
 }
 
 .welcome > h1 > span {
-  color: #fc6011;
+  color: var(--main-color);
 }
 
 .color-primary {
-  color: #fc6011;
+  color: var(--main-color);
 }
 
 /* shortcout .welcome > *| */
