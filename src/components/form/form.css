@@ -1,3 +1,14 @@
 .form {
-  color: var(--primary-font-color);
+  display: grid;
+  grid-row-gap: 1em;
+  text-align: center;
+}
+
+.form .input {
+  margin-top: 2em;
+}
+
+.passwordField {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
