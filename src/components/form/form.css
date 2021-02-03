@@ -6,9 +6,23 @@
 
 .form .input {
   margin-top: 2em;
+  text-align: center;
+  font-size: 2rem;
 }
 
-.passwordField {
+.form__fail a {
+  margin-left: 0.5em;
+}
+
+.form__otp {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: column;
+  justify-content: center;
+  grid-column-gap: 1.2em;
+}
+
+.form__otp input {
+  padding: 0.6rem;
+  width: 2.8rem;
+  border-radius: 0.6rem;
 }

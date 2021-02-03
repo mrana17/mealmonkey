@@ -10,6 +10,7 @@
   padding: 15px 50px;
   width: fit-content;
   text-align: center;
+  justify-self: center;
 }
 .btn-outline-border {
   color: #fc6011;
