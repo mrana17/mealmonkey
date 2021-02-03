@@ -1,10 +1,17 @@
+import { createElement } from "../../utils/createElement";
+
 function createOTPInputElement() {
-  const passwordField = document.createElement("input");
-  passwordField.setAttribute("type", "password");
-  passwordField.setAttribute("placeholder", "*");
-  passwordField.setAttribute("pattern", "[0-9]{1}[0-9]{3}");
-  passwordField.setAttribute("maxlength", "1");
-  passwordField.className = "input";
+  const passwordField = createElement("input", {
+    className: "input",
+    placeholder: "*",
+    type: "password",
+    maxLength: "1",
+  });
+  // passwordField.setAttribute("type", "password");
+  // passwordField.setAttribute("placeholder", "*");
+  // passwordField.setAttribute("pattern", "[0-9]{1}[0-9]{3}");
+  // passwordField.setAttribute("maxlength", "1");
+  // passwordField.className = "input";
 
   return passwordField;
 }
@@ -30,6 +37,27 @@ function createNextButton() {
   return nextButton;
 }
 
+function createPasswordContainerElement() {
+  const passwordField1 = createOTPInputElement();
+  const passwordField2 = createOTPInputElement();
+  const passwordField3 = createOTPInputElement();
+  const passwordField4 = createOTPInputElement();
+
+  const passwordContainer = createElement("div", {
+    className: "form__otp",
+    children: [passwordField1, passwordField2, passwordField3, passwordField4],
+  });
+
+  // passwordContainer.append(
+  //   passwordField1,
+  //   passwordField2,
+  //   passwordField3,
+  //   passwordField4
+  // );
+
+  return passwordContainer;
+}
+
 export function createVerifyForm() {
   const form = document.createElement("form");
   form.className = "form";
@@ -38,19 +66,20 @@ export function createVerifyForm() {
 
   const numberCheck = createNumberCheckElement();
 
-  const passwordField1 = createOTPInputElement();
-  const passwordField2 = createOTPInputElement();
-  const passwordField3 = createOTPInputElement();
-  const passwordField4 = createOTPInputElement();
+  const passwordContainer = createPasswordContainerElement();
+  // const passwordField1 = createOTPInputElement();
+  // const passwordField2 = createOTPInputElement();
+  // const passwordField3 = createOTPInputElement();
+  // const passwordField4 = createOTPInputElement();
 
-  const passwordContainer = document.createElement("div");
-  passwordContainer.className = "form__otp";
-  passwordContainer.append(
-    passwordField1,
-    passwordField2,
-    passwordField3,
-    passwordField4
-  );
+  // const passwordContainer = document.createElement("div");
+  // passwordContainer.className = "form__otp";
+  // passwordContainer.append(
+  //   passwordField1,
+  //   passwordField2,
+  //   passwordField3,
+  //   passwordField4
+  // );
   const nextButton = createNextButton();
 
   const fail = document.createElement("p");
