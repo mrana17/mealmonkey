@@ -94,6 +94,10 @@ export function createVerifyForm() {
   const passwordField3 = createOTPInputElement();
   const passwordField4 = createOTPInputElement();
 
+  const messageElement = createElement("p", {
+    className: "message",
+  });
+
   return createElement("form", {
     className: "form",
     children: [
@@ -104,6 +108,7 @@ export function createVerifyForm() {
         innerText:
           "Please check your mobile number 071*****12 continue to reset your password",
       }),
+      messageElement,
       createElement("div", {
         className: "form__otp",
         children: [
@@ -115,7 +120,7 @@ export function createVerifyForm() {
       }),
       createElement("input", {
         type: "submit",
-        innerText: "Next",
+        value: "Next",
         className: "btn",
       }),
       createElement("p", {
@@ -139,9 +144,9 @@ export function createVerifyForm() {
       const secretPassword = "3217";
 
       if (password === secretPassword) {
-        alert("Correct Password!");
+        messageElement.innerText = "Correct Password!";
       } else {
-        alert("Wrong Password!");
+        messageElement.innerText = "Wrong Password!";
       }
     },
   });
